@@ -1,0 +1,32 @@
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\bin\Debug\JukeBox.exe.config
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\bin\Debug\JukeBox.exe
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\bin\Debug\JukeBox.pdb
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\JukeBox.csprojResolveAssemblyReference.cache
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\MainWindow.g.cs
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\App.g.cs
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\JukeBox_MarkupCompile.cache
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\JukeBox_MarkupCompile.lref
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\MainWindow.baml
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\JukeBox.g.resources
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\JukeBox.Properties.Resources.resources
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\JukeBox.csproj.GenerateResource.Cache
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\JukeBox.exe
+c:\users\cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\obj\Debug\JukeBox.pdb
+C:\Users\Cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\bin\Debug\NAudio.dll
+C:\Users\Cornchip\documents\visual studio 2017\Projects\JukeBox\JukeBox\bin\Debug\NAudio.xml
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\JukeBox.exe.config
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\JukeBox.exe
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\JukeBox.pdb
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\NAudio.dll
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\NAudio.xml
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.csprojResolveAssemblyReference.cache
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\MainWindow.g.cs
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\App.g.cs
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox_MarkupCompile.cache
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox_MarkupCompile.lref
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\MainWindow.baml
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.g.resources
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.Properties.Resources.resources
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.csproj.GenerateResource.Cache
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.exe
+D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.pdb
