@@ -61,20 +61,21 @@
 
             <TextBlock Name="TextApplicationName" HorizontalAlignment="Left" Padding="10" Foreground="White" FontSize="16">Byte Club Jukebox</TextBlock>
         </DockPanel>
-        
+
         <Grid>
             <TextBlock Name="TxtSongTitle" Text="No Song Playing" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="38" Margin="0,10,0,0"/>
             <Button Style="{StaticResource btn-player-controls}" Name="BtnStop" Margin="72,0,0,10" Content="◼" HorizontalAlignment="Center" Click="BtnStop_Click" />
             <Button Style="{StaticResource btn-player-controls}" Name="BtnPlay" Margin="0,0,0,10" Content="▶" HorizontalAlignment="Center" Click="BtnPlay_Click"/>
-            <Button Style="{StaticResource btn-player-controls}" Name="BtnNext" Margin="0,0,72,10" Content=">>" Click="BtnNext_Click" />
+            <Button Style="{StaticResource btn-player-controls}" Name="BtnNext" Margin="0,0,72,10" Content="&gt;&gt;" Click="BtnNext_Click" />
             <Slider Name="SldPosition" Margin="60" VerticalAlignment="Bottom"
                     HorizontalAlignment="Stretch" Foreground="#00000000" Background="#00000000" BorderBrush="#00000000" Maximum="100" ValueChanged="SldPosition_ValueChanged"  />
             <Slider Name="SldVolume" Value="100" Margin="60, 0, 0, 20" VerticalAlignment="Bottom"
                     HorizontalAlignment="Left" Width="100" Maximum="100" ValueChanged="SldVolume_ValueChanged"  />
             <TextBlock Name="TxtVolume" Text="100%" Foreground="White" Margin="170, 0, 0, 20" VerticalAlignment="Bottom"
                     HorizontalAlignment="Left" FontSize="14" />
-            <ListBox Name="LstSong" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#333333"  Margin="60,66,60,100" BorderBrush="#707070" KeyDown="LstSong_KeyDown" >
-            </ListBox>
+            <ListBox Name="LstSong" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#333333"  Margin="60,66,60,100" BorderBrush="#707070" KeyDown="LstSong_KeyDown" />
+            <Button x:Name="BtnUrl" Width="80" Height="20" Foreground="White" Margin="0, 0, 60, 20"
+                FontSize="14" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="URL" Style="{StaticResource btn-player-controls}" Click="BtnUrl_Click"/>
         </Grid>
     </DockPanel>
 </Window>

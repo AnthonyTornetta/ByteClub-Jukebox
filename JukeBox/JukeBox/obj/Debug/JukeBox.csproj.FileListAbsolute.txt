@@ -30,3 +30,23 @@ D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.Properties.Resou
 D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.csproj.GenerateResource.Cache
 D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.exe
 D:\Byte Club\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.pdb
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\JukeBox.exe.config
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\JukeBox.exe
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\JukeBox.pdb
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\NAudio.dll
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\NAudio.xml
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.csprojAssemblyReference.cache
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\MainWindow.g.cs
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\App.g.cs
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox_MarkupCompile.cache
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox_MarkupCompile.lref
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\MainWindow.baml
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.g.resources
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.Properties.Resources.resources
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.csproj.GenerateResource.cache
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.csproj.CoreCompileInputs.cache
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.csproj.CopyComplete
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.exe
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.pdb
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\Dialogue.baml
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\Dialogue.g.cs

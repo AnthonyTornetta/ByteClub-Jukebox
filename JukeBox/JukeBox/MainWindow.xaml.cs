@@ -64,7 +64,8 @@ namespace JukeBox
                 });
             }
 
-            TxtSongTitle.Text = (string) ((ListBoxItem)LstSong.Items.GetItemAt(0)).Content;
+            if(LstSong.Items.Count != 0)
+                TxtSongTitle.Text = (string) ((ListBoxItem)LstSong.Items.GetItemAt(0)).Content;
 
             // The timer will update the progress bar
             DispatcherTimer timer = new DispatcherTimer();
@@ -86,13 +87,16 @@ namespace JukeBox
         /// </summary>
         private void NextSong()
         {
-            string content = (string) ((ListBoxItem)LstSong.Items.GetItemAt(0)).Content;
-            for(int i = 0; i < LstSong.Items.Count - 1; i++)
+            if (LstSong.Items.Count != 0)
             {
-                ((ListBoxItem)LstSong.Items.GetItemAt(i)).Content = ((ListBoxItem)LstSong.Items.GetItemAt(i + 1)).Content;
-            }
+                string content = (string)((ListBoxItem)LstSong.Items.GetItemAt(0)).Content;
+                for (int i = 0; i < LstSong.Items.Count - 1; i++)
+                {
+                    ((ListBoxItem)LstSong.Items.GetItemAt(i)).Content = ((ListBoxItem)LstSong.Items.GetItemAt(i + 1)).Content;
+                }
 
-            ((ListBoxItem)LstSong.Items.GetItemAt(LstSong.Items.Count - 1)).Content = content;
+                ((ListBoxItem)LstSong.Items.GetItemAt(LstSong.Items.Count - 1)).Content = content;
+            }
         }
 
         /// <summary>
@@ -100,7 +104,7 @@ namespace JukeBox
         /// </summary>
         private void PlaySong()
         {
-            if (outputDevice == null)
+            if (outputDevice == null && LstSong.Items.Count != 0)
             {
                 ListBoxItem item = (ListBoxItem)LstSong.Items.GetItemAt(0);
                 string content = (string)item.Content;
@@ -251,11 +255,14 @@ namespace JukeBox
         /// </summary>
         private void BtnStop_Click(object sender, RoutedEventArgs e)
         {
-            handleSongSwitch = false;
-            outputDevice.Stop();
-            audioFileReader.Position = 0;
+            if (outputDevice != null)
+            {
+                handleSongSwitch = false;
+                outputDevice.Stop();
+                audioFileReader.Position = 0;
 
-            BtnPlay.Content = PLAY_TEXT;
+                BtnPlay.Content = PLAY_TEXT;
+            }
         }
         
         /// <summary>
@@ -334,6 +341,15 @@ namespace JukeBox
 
                     LstSong.SelectedIndex = 0;
                 }
+            }
+        }
+
+        private void BtnUrl_Click(object sender, RoutedEventArgs e)
+        {
+            string url = Dialogue.Show();
+            if(url != null)
+            {
+
             }
         }
     }
