@@ -50,3 +50,11 @@ C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Deb
 C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\JukeBox.pdb
 C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\Dialogue.baml
 C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\obj\Debug\Dialogue.g.cs
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\LtGt.dll
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\Sprache.dll
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\YoutubeExplode.dll
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\LtGt.xml
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\Sprache.xml
+C:\Users\cl20Tornettaa\Documents\GitHub\ByteClub-Jukebox\JukeBox\JukeBox\bin\Debug\YoutubeExplode.xml

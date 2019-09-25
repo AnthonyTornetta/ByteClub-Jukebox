@@ -10,6 +10,9 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
+using YoutubeExplode;
+using YoutubeExplode.Models;
+using YoutubeExplode.Models.MediaStreams;
 
 namespace JukeBox
 {
@@ -344,13 +347,55 @@ namespace JukeBox
             }
         }
 
+
         private void BtnUrl_Click(object sender, RoutedEventArgs e)
         {
             string url = Dialogue.Show();
             if(url != null)
             {
+                string id = url;
+                if(url.Contains("youtube.com"))
+                {
+                    id = YoutubeClient.ParseVideoId(url);
+                }
 
+                downloadVideo(id);
             }
+        }
+
+        private async void downloadVideo(string id)
+        {
+            YoutubeClient client = new YoutubeClient();
+            foreach(Video s in await client.SearchVideosAsync("hello"))
+            {
+                MessageBox.Show(s.Title);
+            }
+            Video video = await client.GetVideoAsync(id);
+            string title = video.Title; // "Infected Mushroom - Spitfire [Monstercat Release]"
+            string author = video.Author; // "Monstercat"
+            Duration duration = video.Duration; // 00:07:14
+
+            // Get metadata for all streams in this video
+            MediaStreamInfoSet streamInfoSet = await client.GetVideoMediaStreamInfosAsync(id);
+
+            // Select one of the streams, e.g. highest quality muxed stream
+            var streamInfo = streamInfoSet.Audio.WithHighestBitrate();
+
+            // ...or highest bitrate audio stream
+            // var streamInfo = streamInfoSet.Audio.WithHighestBitrate();
+
+            // ...or highest quality & highest framerate MP4 video stream
+            // var streamInfo = streamInfoSet.Video
+            //    .Where(s => s.Container == Container.Mp4)
+            //    .OrderByDescending(s => s.VideoQuality)
+            //    .ThenByDescending(s => s.Framerate)
+            //    .First();
+
+            // Get file extension based on stream's container
+            var ext = streamInfoSet.Audio.WithHighestBitrate().Container.GetFileExtension();
+
+            // Download stream to file
+            await client.DownloadMediaStreamAsync(streamInfo, $"downloaded_video.{ext}");
         }
     }
 }
