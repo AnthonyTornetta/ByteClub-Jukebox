@@ -4,15 +4,14 @@
 
 using NAudio.Wave;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
-using YoutubeExplode;
-using YoutubeExplode.Models;
-using YoutubeExplode.Models.MediaStreams;
+using YoutubeExtractor;
 
 namespace JukeBox
 {
@@ -59,12 +58,7 @@ namespace JukeBox
 
             foreach (string file in files)
             {
-                LstSong.Items.Add(new ListBoxItem()
-                {
-                    Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255)),
-                    Content = file.Substring(l1, file.Length - (l1 + l2)),
-                    ToolTip = SONG_TOOLTIP,
-                });
+                addSong(file.Substring(l1, file.Length - (l1 + l2)));
             }
 
             if(LstSong.Items.Count != 0)
@@ -75,6 +69,17 @@ namespace JukeBox
             timer.Tick += Timer_Tick;
             timer.Interval = new TimeSpan(166666); // 1 tick = 100 nanoseconds. 166,666 is approx 60 times per second
             timer.Start();
+        }
+
+        private void addSong(string name)
+        {
+            LstSong.Items.Add(
+            new ListBoxItem()
+            {
+                Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255)),
+                Content = name,
+                ToolTip = SONG_TOOLTIP,
+            });
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -356,46 +361,42 @@ namespace JukeBox
                 string id = url;
                 if(url.Contains("youtube.com"))
                 {
-                    id = YoutubeClient.ParseVideoId(url);
+                    IEnumerable<VideoInfo> videoInfos = DownloadUrlResolver.GetDownloadUrls(id);
+
+                    int maxBitrate = 0;
+                    VideoInfo video = null;
+
+                    foreach (VideoInfo info in videoInfos)
+                    {
+                        if(info.CanExtractAudio)
+                        {
+                            if(info.AudioBitrate > maxBitrate)
+                            {
+                                maxBitrate = info.AudioBitrate;
+                                video = info;
+                            }
+                        } 
+                    }
+
+                    if (video.RequiresDecryption)
+                    {
+                        DownloadUrlResolver.DecryptDownloadUrl(video);
+                    }
+
+                    AudioDownloader audioDownloader = new AudioDownloader(video, video.Title + video.AudioExtension);
+
+                    audioDownloader.DownloadFinished += AudioDownloader_DownloadFinished;
+
+                    audioDownloader.Execute();
                 }
 
-                downloadVideo(id);
+                //downloadVideo(id);
             }
         }
 
-        private async void downloadVideo(string id)
+        private void AudioDownloader_DownloadFinished(object sender, EventArgs e)
         {
-            YoutubeClient client = new YoutubeClient();
-            foreach(Video s in await client.SearchVideosAsync("hello"))
-            {
-                MessageBox.Show(s.Title);
-            }
-            Video video = await client.GetVideoAsync(id);
-            string title = video.Title; // "Infected Mushroom - Spitfire [Monstercat Release]"
-            string author = video.Author; // "Monstercat"
-            Duration duration = video.Duration; // 00:07:14
-
-            // Get metadata for all streams in this video
-            MediaStreamInfoSet streamInfoSet = await client.GetVideoMediaStreamInfosAsync(id);
-
-            // Select one of the streams, e.g. highest quality muxed stream
-            var streamInfo = streamInfoSet.Audio.WithHighestBitrate();
-
-            // ...or highest bitrate audio stream
-            // var streamInfo = streamInfoSet.Audio.WithHighestBitrate();
-
-            // ...or highest quality & highest framerate MP4 video stream
-            // var streamInfo = streamInfoSet.Video
-            //    .Where(s => s.Container == Container.Mp4)
-            //    .OrderByDescending(s => s.VideoQuality)
-            //    .ThenByDescending(s => s.Framerate)
-            //    .First();
-
-            // Get file extension based on stream's container
-            var ext = streamInfoSet.Audio.WithHighestBitrate().Container.GetFileExtension();
-
-            // Download stream to file
-            await client.DownloadMediaStreamAsync(streamInfo, $"downloaded_video.{ext}");
+            //LstSong.Items.Add();
         }
     }
 }
